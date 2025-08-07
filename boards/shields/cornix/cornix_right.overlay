@@ -46,6 +46,10 @@
     };
 };
 
+&right_encoder {
+    status = "okay";
+}
+
 
 / {
     EXT_POWER {
