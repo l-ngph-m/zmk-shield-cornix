@@ -114,7 +114,7 @@ projects:
     remote: zmkfirmware
     revision: main
     import: app/west.yml
-  - name: zmk-shield-cornix
+  - name: zmk-keyboard-cornix
     remote: cornix-shield
     revision: main
 ```
@@ -168,7 +168,7 @@ If you prefer to build this project locally without adding it as a dependency in
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/hitsmaxft/zmk-shield-cornix.git
+   git clone https://github.com/hitsmaxft/zmk-keyboard-cornix.git
    ```
 
 2. **Configure your ZMK build with the extra module**:
@@ -177,10 +177,10 @@ If you prefer to build this project locally without adding it as a dependency in
    
    ```ini
    [build]
-   cmake-args = -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DZMK_EXTRA_MODULES=/full/absolute/path/to/zmk-shield-cornix
+   cmake-args = -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DZMK_EXTRA_MODULES=/full/absolute/path/to/zmk-keyboard-cornix
    ```
    
-   Replace `/full/absolute/path/to/zmk-shield-cornix` with the actual absolute path where you cloned this repository.
+   Replace `/full/absolute/path/to/zmk-keyboard-cornix` with the actual absolute path where you cloned this repository.
 
 3. **Build the firmware**:
    ```bash

@@ -34,7 +34,7 @@ projects:
     remote: zmkfirmware
     revision: main
     import: app/west.yml
-  - name: zmk-shield-cornix
+  - name: zmk-keyboard-cornix
     remote: cornix-shield
     revision: main
 ```

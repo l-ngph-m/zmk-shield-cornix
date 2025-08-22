@@ -1,5 +1,5 @@
 ---
-name: zmk-shield-cornix
+name: zmk-keyboard-cornix
 build:
   settings:
     board_root: .
