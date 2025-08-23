@@ -1,4 +1,4 @@
-# ZMK Shield Cornix
+# ZMK Keyboard Cornix
 
 This shield has been tested with Cornix using ZMK and provides full split-role configuration, battery power management, and Bluetooth central/peripheral setup per ZMK split guidelines 
 
@@ -102,7 +102,7 @@ Edit the `config/west.yml` file, add to the `manifest/remotes` section:
 remotes:
   - name: zmkfirmware
     url-base: https://github.com/zmkfirmware
-  - name: cornix-shield
+  - name: cornix
     url-base: https://github.com/hitsmaxft
 ```
 
@@ -115,7 +115,7 @@ projects:
     revision: main
     import: app/west.yml
   - name: zmk-keyboard-cornix
-    remote: cornix-shield
+    remote: cornix
     revision: main
 ```
 
@@ -131,12 +131,10 @@ Edit the `build.yaml` file, add:
 
 ```yaml
 include:
-  - board: cornix_e73
-    shield: cornix_main_left
+  - board: cornix_main_left
     artifact-name: cornix_left
 
-  - board: cornix_e73
-    shield: cornix_right
+  - board: cornix_right
     artifact-name: cornix_right
 ```
 
