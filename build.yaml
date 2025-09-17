@@ -13,18 +13,9 @@
 #
 ---
 include:
-  - board: cornix_dongle
-    shield: cornix_dongle_eyelash dongle_display
-    snippet: studio-rpc-usb-uart
-    artifact-name: cornix_dongle
-
   - board: cornix_left
     #shield: cornix_indicator
-    artifact-name: cornix_left_default
-
-  - board: cornix_ph_left
-    #shield: cornix_indicator
-    artifact-name: cornix_left_for_dongle
+    artifact-name: cornix_left
 
   - board: cornix_right
     #shield: cornix_indicator
