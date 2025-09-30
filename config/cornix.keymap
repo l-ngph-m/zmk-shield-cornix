@@ -107,6 +107,15 @@
             #binding-cells = <0>;
             bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
         };
+
+        BT_CLEAR: BT_CLEAR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BT_CLEAR";
+            bindings = <&bt BT_CLR>, <&bt BT_CLR_ALL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -184,10 +193,10 @@
 
         layer_3 {
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                              &kp F7      &kp F8  &kp F9  &kp F10  &kp F11          &kp F12
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none       &none   &none   &none    &kp PRINTSCREEN  &none
-&trans      &none         &none         &none         &none         &none         &out OUT_TOG  &tog 1  &none       &none   &none   &none    &none            &trans
-&trans      &trans        &trans        &trans        &trans        &trans                              &kp DELETE  &trans  &trans  &trans   &trans           &trans
+&kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                              &kp F7      &kp F8  &kp F9  &kp F10  &kp F11          &kp F12
+&BT_CLEAR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none       &none   &none   &none    &kp PRINTSCREEN  &none
+&trans     &none         &none         &none         &none         &none         &out OUT_TOG  &tog 1  &none       &none   &none   &none    &none            &trans
+&trans     &trans        &trans        &trans        &trans        &trans                              &kp DELETE  &trans  &trans  &trans   &trans           &trans
             >;
         };
 
