@@ -160,7 +160,7 @@
             bindings = <
 &kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                  &kp Y     &kp U  &kp I      &kp O     &kp P     &kp LBKT
 &kp ESC    &kp A     &kp S     &kp D  &kp F  &kp G                                  &kp H     &kp J  &kp K      &kp L     &kp SEMI  &kp SQT
-&sk LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &kp C_MUTE  &media_control  &kp N     &kp M  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
+&kp LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &kp C_MUTE  &media_control  &kp N     &kp M  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
 &kp LCTRL  &kp LGUI  &kp LALT  &mo 2  &sl 5  &kp SPACE                              &kp BSPC  &mo 3  &kp RET    &kp RALT  &kp RGUI  &mo 4
             >;
 
@@ -202,10 +202,10 @@
 
         layer_4 {
             bindings = <
-&trans  &kp N1  &trans  &kp N2  &kp N3  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp N4  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N6  &trans  &kp N5  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1        &trans  &kp N2        &kp N5        &kp N8                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans        &kp NUMBER_6  &kp N9                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_3  &trans  &kp NUMBER_4  &kp N7        &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
