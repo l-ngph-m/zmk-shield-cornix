@@ -53,32 +53,6 @@
     // Activate ADJUST layer by pressing raise and lower
 
     behaviors {
-        hm_l: homerow_mods_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <200>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
-            hold-trigger-on-release;
-        };
-
-        hm_r: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
-            hold-trigger-on-release;
-        };
-
         // Positional Homerow mods for shift
         // Use faster tapping term and disable some features that may
         // cause false negatives.
@@ -116,6 +90,141 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        DOLLAR_TILDE: DOLLAR_TILDE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_TILDE";
+            bindings = <&kp DOLLAR>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        AMP_PERCENT: AMP_PERCENT {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AMP_PERCENT";
+            bindings = <&kp AMPS>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        LEFT_BRK_SEVEN: LEFT_BRK_SEVEN {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_BRK_SEVEN";
+            bindings = <&kp LEFT_BRACKET>, <&kp NUMBER_7>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        LEFT_BRC_FIVE: LEFT_BRC_FIVE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_BRC_FIVE";
+            bindings = <&kp LEFT_BRACE>, <&kp NUMBER_5>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        RIGHT_BRC_THREE: RIGHT_BRC_THREE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_BRC_THREE";
+            bindings = <&kp RIGHT_BRACE>, <&kp NUMBER_3>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        OPEN_PAR_ONE: OPEN_PAR_ONE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPEN_PAR_ONE";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp NUMBER_1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        EQUAL_NINE: EQUAL_NINE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQUAL_NINE";
+            bindings = <&kp EQUAL>, <&kp N9>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        ASTERISK_ZERO: ASTERISK_ZERO {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ASTERISK_ZERO";
+            bindings = <&kp ASTERISK>, <&kp NUMBER_0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        CLOSE_PAR_TWO: CLOSE_PAR_TWO {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CLOSE_PAR_TWO";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp NUMBER_2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        PLUS_FOUR: PLUS_FOUR {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_FOUR";
+            bindings = <&kp PLUS>, <&kp NUMBER_4>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        RIGHT_BRK_SIX: RIGHT_BRK_SIX {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_BRK_SIX";
+            bindings = <&kp RIGHT_BRACKET>, <&kp NUMBER_6>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        EXCL_EIGHT: EXCL_EIGHT {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXCL_EIGHT";
+            bindings = <&kp EXCLAMATION>, <&kp NUMBER_8>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        POUND_GRAVE: POUND_GRAVE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "POUND_GRAVE";
+            bindings = <&kp HASH>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        AT_CARET: AT_CARET {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AT_CARET";
+            bindings = <&kp AT_SIGN>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        PIPE_BCKSLSH: PIPE_BCKSLSH {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PIPE_BCKSLSH";
+            bindings = <&kp PIPE>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -126,14 +235,51 @@
         cb_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
-            layers = <0>;
+            layers = <3>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        QWERTY {
+            display-name = "QWERTY";
+            bindings = <
+&kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                      &kp Y     &kp U  &kp I      &kp O     &kp P     &kp LBKT
+&kp ESC    &kp A     &kp S     &kp D  &kp F  &kp G                                      &kp H     &kp J  &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &media_control  &media_control  &kp N     &kp M  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
+&kp LCTRL  &kp LGUI  &kp LALT  &mo 4  &sl 7  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET    &kp RALT  &kp RGUI  &mo 6
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        DVORAK {
+            display-name = "Base";
+            bindings = <
+&kp TAB    &kp SEMI  &kp COMMA  &kp DOT  &kp P  &kp Y                                      &kp F     &kp G  &kp C    &kp R     &kp L     &kp FSLH
+&kp ESC    &kp A     &kp O      &kp E    &kp U  &kp I                                      &kp D     &kp H  &kp T    &kp N     &kp S     &kp MINUS
+&sk LSHFT  &kp SQT   &kp Q      &kp J    &kp K  &kp X      &media_control  &media_control  &kp B     &kp M  &kp W    &kp V     &kp Z     &sk RSHFT
+&kp LCTRL  &kp LGUI  &kp LALT   &mo 5    &mo 2  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET  &kp RALT  &kp RGUI  &mo 6
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        DVORAK_NUM {
+            bindings = <
+&AMP_PERCENT   &LEFT_BRK_SEVEN  &LEFT_BRC_FIVE  &RIGHT_BRC_THREE  &OPEN_PAR_ONE  &EQUAL_NINE                  &ASTERISK_ZERO  &CLOSE_PAR_TWO  &PLUS_FOUR  &RIGHT_BRK_SIX  &EXCL_EIGHT    &POUND_GRAVE
+&DOLLAR_TILDE  &kp N1           &kp N3          &kp N5            &kp N7         &kp N9                       &kp N0          &kp N2          &kp N4      &kp N6          &kp N8         &AT_CARET
+&trans         &trans           &trans          &trans            &trans         &trans       &trans  &trans  &trans          &trans          &trans      &trans          &PIPE_BCKSLSH  &trans
+&trans         &trans           &trans          &trans            &trans         &trans                       &trans          &trans          &trans      &trans          &trans         &trans
+            >;
+        };
+
+        COLEMAK {
             display-name = "Base";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -147,7 +293,7 @@
 &kp TAB    &kp Q     &kp W     &kp F  &kp P  &kp B                                      &kp J     &kp L  &kp U      &kp Y     &kp SEMI  &kp LBKT
 &kp ESC    &kp A     &kp R     &kp S  &kp T  &kp G                                      &kp M     &kp N  &kp E      &kp I     &kp O     &kp SQT
 &sk LSHFT  &kp Z     &kp X     &kp C  &kp D  &kp V      &media_control  &media_control  &kp K     &kp H  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT  &mo 5  &mo 2  &kp SPACE                                  &kp BSPC  &mo 3  &kp RET    &kp RALT  &kp RGUI  &mo 4
+&kp LCTRL  &kp LGUI  &kp LALT  &mo 7  &mo 4  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET    &kp RALT  &kp RGUI  &mo 6
             >;
 
             sensor-bindings =
@@ -155,21 +301,7 @@
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
-        QWERTY_LAYER {
-            display-name = "QWERTY";
-            bindings = <
-&kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                      &kp Y     &kp U  &kp I      &kp O     &kp P     &kp LBKT
-&kp ESC    &kp A     &kp S     &kp D  &kp F  &kp G                                      &kp H     &kp J  &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &media_control  &media_control  &kp N     &kp M  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT  &mo 2  &sl 5  &kp SPACE                                  &kp BSPC  &mo 3  &kp RET    &kp RALT  &kp RGUI  &mo 4
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        layer_1 {
+        NUM_SYM {
             bindings = <
 &kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                     &kp CARET     &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET
 &trans     &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                          &kp NUMBER_6  &kp N7         &kp N8         &kp N9                &kp N0                 &kp DOUBLE_QUOTES
@@ -182,7 +314,7 @@
                 <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
-        layer_2 {
+        NAV {
             bindings = <
 &trans  &msc SCRL_UP    &mmv MOVE_UP    &none            &none   &none                   &none     &none          &none      &none      &none   &none
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &none                   &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &none   &none
@@ -191,20 +323,20 @@
             >;
         };
 
-        layer_3 {
+        FUNCTIONS {
             bindings = <
-&kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                              &kp F7      &kp F8  &kp F9  &kp F10  &kp F11          &kp F12
-&BT_CLEAR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none       &none   &none   &none    &kp PRINTSCREEN  &none
-&trans     &none         &none         &none         &none         &none         &out OUT_TOG  &tog 1  &none       &none   &none   &none    &none            &trans
-&trans     &trans        &trans        &trans        &trans        &trans                              &kp DELETE  &trans  &trans  &trans   &trans           &trans
+&kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                             &kp F7      &kp F8  &kp F9  &kp F10  &kp F11          &kp F12
+&BT_CLEAR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &tog 0      &tog 1  &tog 3  &none    &kp PRINTSCREEN  &none
+&trans     &none         &none         &none         &none         &none         &out OUT_TOG  &none  &none       &none   &none   &none    &none            &trans
+&trans     &trans        &trans        &trans        &trans        &trans                             &kp DELETE  &trans  &trans  &trans   &trans           &trans
             >;
         };
 
-        layer_4 {
+        GAME_NUM {
             bindings = <
 &trans  &kp N1        &trans  &kp N2        &kp N5        &kp N8                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans  &trans        &kp NUMBER_6  &kp N9                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_3  &trans  &kp NUMBER_4  &kp N7        &kp N0  &tog 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_3  &trans  &kp NUMBER_4  &kp N7        &kp N0  &tog 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans  &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
