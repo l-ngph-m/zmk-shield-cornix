@@ -235,7 +235,7 @@
         cb_escape {
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
-            layers = <3>;
+            layers = <2>;
         };
     };
 
@@ -245,10 +245,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                      &kp Y     &kp U  &kp I      &kp O     &kp P     &kp LBKT
+&kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                      &kp Y     &kp U  &kp I      &kp O     &kp P     &kp MINUS
 &kp ESC    &kp A     &kp S     &kp D  &kp F  &kp G                                      &kp H     &kp J  &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &media_control  &media_control  &kp N     &kp M  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT  &mo 4  &sl 7  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET    &kp RALT  &kp RGUI  &mo 6
+&kp LCTRL  &kp LGUI  &kp LALT  &mo 3  &sl 6  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET    &kp RALT  &kp RGUI  &mo 5
             >;
 
             sensor-bindings =
@@ -262,21 +262,12 @@
 &kp TAB    &kp SEMI  &kp COMMA  &kp DOT  &kp P  &kp Y                                      &kp F     &kp G  &kp C    &kp R     &kp L     &kp FSLH
 &kp ESC    &kp A     &kp O      &kp E    &kp U  &kp I                                      &kp D     &kp H  &kp T    &kp N     &kp S     &kp MINUS
 &sk LSHFT  &kp SQT   &kp Q      &kp J    &kp K  &kp X      &media_control  &media_control  &kp B     &kp M  &kp W    &kp V     &kp Z     &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT   &mo 5    &mo 2  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET  &kp RALT  &kp RGUI  &mo 6
+&kp LCTRL  &kp LGUI  &kp LALT   &mo 4    &mo 3  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET  &kp RALT  &kp RGUI  &mo 5
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
                 <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-        };
-
-        DVORAK_NUM {
-            bindings = <
-&DOLLAR_TILDE  &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPS                  &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp ASTERISK   &EXCL_PERCENT
-&POUND_GRAVE   &kp N1    &kp NUMBER_2      &kp N3          &kp N4                &kp N5                    &kp N6     &kp N7                 &kp N8           &kp N9             &kp N0         &AT_CARET
-&trans         &trans    &trans            &trans          &trans                &trans    &trans  &trans  &trans     &trans                 &trans           &trans             &PIPE_BCKSLSH  &trans
-&trans         &trans    &trans            &trans          &trans                &trans                    &trans     &trans                 &trans           &trans             &trans         &trans
-            >;
         };
 
         COLEMAK {
@@ -293,7 +284,7 @@
 &kp TAB    &kp Q     &kp W     &kp F  &kp P  &kp B                                      &kp J     &kp L  &kp U      &kp Y     &kp SEMI  &kp LBKT
 &kp ESC    &kp A     &kp R     &kp S  &kp T  &kp G                                      &kp M     &kp N  &kp E      &kp I     &kp O     &kp SQT
 &sk LSHFT  &kp Z     &kp X     &kp C  &kp D  &kp V      &media_control  &media_control  &kp K     &kp H  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT  &mo 7  &mo 4  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET    &kp RALT  &kp RGUI  &mo 6
+&kp LCTRL  &kp LGUI  &kp LALT  &mo 6  &mo 3  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET    &kp RALT  &kp RGUI  &mo 5
             >;
 
             sensor-bindings =
@@ -303,15 +294,11 @@
 
         NUM_SYM {
             bindings = <
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp DOLLAR  &kp PERCENT                     &kp CARET     &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET
-&trans     &kp N1           &kp N2       &kp N3     &kp N4      &kp N5                          &kp NUMBER_6  &kp N7         &kp N8         &kp N9                &kp N0                 &kp DOUBLE_QUOTES
-&trans     &none            &none        &none      &kp MINUS   &kp UNDERSCORE  &trans  &trans  &kp PLUS      &kp EQUAL      &kp LESS_THAN  &kp GREATER_THAN      &kp BACKSLASH          &trans
-&trans     &trans           &trans       &trans     &trans      &trans                          &trans        &trans         &trans         &trans                &trans                 &trans
+&DOLLAR_TILDE  &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPS                  &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp ASTERISK   &EXCL_PERCENT
+&POUND_GRAVE   &kp N1    &kp NUMBER_2      &kp N3          &kp N4                &kp N5                    &kp N6     &kp N7                 &kp N8           &kp N9             &kp N0         &AT_CARET
+&trans         &trans    &trans            &trans          &trans                &trans    &trans  &trans  &trans     &trans                 &trans           &trans             &PIPE_BCKSLSH  &trans
+&trans         &trans    &trans            &trans          &trans                &trans                    &trans     &trans                 &trans           &trans             &trans         &trans
             >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
-                <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         NAV {
@@ -326,7 +313,7 @@
         FUNCTIONS {
             bindings = <
 &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                             &kp F7      &kp F8  &kp F9  &kp F10  &kp F11          &kp F12
-&BT_CLEAR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &tog 0      &tog 1  &tog 3  &none    &kp PRINTSCREEN  &none
+&BT_CLEAR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &tog 0      &tog 1  &tog 2  &none    &kp PRINTSCREEN  &none
 &trans     &none         &none         &none         &none         &none         &out OUT_TOG  &none  &none       &none   &none   &none    &none            &trans
 &trans     &trans        &trans        &trans        &trans        &trans                             &kp DELETE  &trans  &trans  &trans   &trans           &trans
             >;
