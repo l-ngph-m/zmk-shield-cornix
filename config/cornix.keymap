@@ -100,10 +100,10 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        AMP_PERCENT: AMP_PERCENT {
+        EXCL_PERCENT: EXCL_PERCENT {
             compatible = "zmk,behavior-mod-morph";
-            label = "AMP_PERCENT";
-            bindings = <&kp AMPS>, <&kp PERCENT>;
+            label = "EXCL_PERCENT";
+            bindings = <&kp EXCLAMATION>, <&kp PERCENT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -272,10 +272,10 @@
 
         DVORAK_NUM {
             bindings = <
-&AMP_PERCENT   &LEFT_BRK_SEVEN  &LEFT_BRC_FIVE  &RIGHT_BRC_THREE  &OPEN_PAR_ONE  &EQUAL_NINE                  &ASTERISK_ZERO  &CLOSE_PAR_TWO  &PLUS_FOUR  &RIGHT_BRK_SIX  &EXCL_EIGHT    &POUND_GRAVE
-&DOLLAR_TILDE  &kp N1           &kp N3          &kp N5            &kp N7         &kp N9                       &kp N0          &kp N2          &kp N4      &kp N6          &kp N8         &AT_CARET
-&trans         &trans           &trans          &trans            &trans         &trans       &trans  &trans  &trans          &trans          &trans      &trans          &PIPE_BCKSLSH  &trans
-&trans         &trans           &trans          &trans            &trans         &trans                       &trans          &trans          &trans      &trans          &trans         &trans
+&DOLLAR_TILDE  &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPS                  &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp ASTERISK   &EXCL_PERCENT
+&POUND_GRAVE   &kp N1    &kp NUMBER_2      &kp N3          &kp N4                &kp N5                    &kp N6     &kp N7                 &kp N8           &kp N9             &kp N0         &AT_CARET
+&trans         &trans    &trans            &trans          &trans                &trans    &trans  &trans  &trans     &trans                 &trans           &trans             &PIPE_BCKSLSH  &trans
+&trans         &trans    &trans            &trans          &trans                &trans                    &trans     &trans                 &trans           &trans             &trans         &trans
             >;
         };
 
