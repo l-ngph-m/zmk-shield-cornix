@@ -262,7 +262,7 @@
 &kp TAB    &kp SEMI  &kp COMMA  &kp DOT  &kp P  &kp Y                                      &kp F     &kp G  &kp C    &kp R     &kp L     &kp FSLH
 &kp ESC    &kp A     &kp O      &kp E    &kp U  &kp I                                      &kp D     &kp H  &kp T    &kp N     &kp S     &kp MINUS
 &sk LSHFT  &kp SQT   &kp Q      &kp J    &kp K  &kp X      &media_control  &media_control  &kp B     &kp M  &kp W    &kp V     &kp Z     &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT   &mo 4    &mo 3  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET  &kp RALT  &kp RGUI  &mo 5
+&kp LCTRL  &kp LGUI  &kp LALT   &mo 4    &sl 3  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET  &kp RALT  &kp RGUI  &mo 5
             >;
 
             sensor-bindings =
