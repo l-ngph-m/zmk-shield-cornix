@@ -71,7 +71,6 @@
 
         mb1_mb2: mb1_mb2 {
             compatible = "zmk,behavior-mod-morph";
-            label = "MB1_MB2";
             bindings = <&mkp MB1>, <&mkp MB2>;
 
             #binding-cells = <0>;
@@ -80,14 +79,12 @@
 
         media_control: media_control {
             compatible = "zmk,behavior-tap-dance";
-            label = "MEDIA_CONTROL";
             #binding-cells = <0>;
             bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
         };
 
         BT_CLEAR: BT_CLEAR {
             compatible = "zmk,behavior-mod-morph";
-            label = "BT_CLEAR";
             bindings = <&bt BT_CLR>, <&bt BT_CLR_ALL>;
 
             #binding-cells = <0>;
@@ -105,7 +102,6 @@
 
         EXCL_PERCENT: EXCL_PERCENT {
             compatible = "zmk,behavior-mod-morph";
-            label = "EXCL_PERCENT";
             bindings = <&kp EXCLAMATION>, <&kp PERCENT>;
 
             #binding-cells = <0>;
@@ -114,7 +110,6 @@
 
         POUND_GRAVE: POUND_GRAVE {
             compatible = "zmk,behavior-mod-morph";
-            label = "POUND_GRAVE";
             bindings = <&kp HASH>, <&kp GRAVE>;
 
             #binding-cells = <0>;
@@ -123,7 +118,6 @@
 
         AT_CARET: AT_CARET {
             compatible = "zmk,behavior-mod-morph";
-            label = "AT_CARET";
             bindings = <&kp AT_SIGN>, <&kp CARET>;
 
             #binding-cells = <0>;
@@ -132,7 +126,6 @@
 
         PIPE_BCKSLSH: PIPE_BCKSLSH {
             compatible = "zmk,behavior-mod-morph";
-            label = "PIPE_BCKSLSH";
             bindings = <&kp PIPE>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
@@ -141,7 +134,6 @@
 
         home_row_mod: home_row_mod {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MOD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
