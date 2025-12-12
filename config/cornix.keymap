@@ -49,6 +49,9 @@
     release-after-ms = <750>;
 };
 
+&lt {
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -109,96 +112,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        LEFT_BRK_SEVEN: LEFT_BRK_SEVEN {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_BRK_SEVEN";
-            bindings = <&kp LEFT_BRACKET>, <&kp NUMBER_7>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        LEFT_BRC_FIVE: LEFT_BRC_FIVE {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_BRC_FIVE";
-            bindings = <&kp LEFT_BRACE>, <&kp NUMBER_5>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        RIGHT_BRC_THREE: RIGHT_BRC_THREE {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_BRC_THREE";
-            bindings = <&kp RIGHT_BRACE>, <&kp NUMBER_3>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        OPEN_PAR_ONE: OPEN_PAR_ONE {
-            compatible = "zmk,behavior-mod-morph";
-            label = "OPEN_PAR_ONE";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp NUMBER_1>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        EQUAL_NINE: EQUAL_NINE {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EQUAL_NINE";
-            bindings = <&kp EQUAL>, <&kp N9>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ASTERISK_ZERO: ASTERISK_ZERO {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ASTERISK_ZERO";
-            bindings = <&kp ASTERISK>, <&kp NUMBER_0>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        CLOSE_PAR_TWO: CLOSE_PAR_TWO {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CLOSE_PAR_TWO";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp NUMBER_2>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        PLUS_FOUR: PLUS_FOUR {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PLUS_FOUR";
-            bindings = <&kp PLUS>, <&kp NUMBER_4>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        RIGHT_BRK_SIX: RIGHT_BRK_SIX {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_BRK_SIX";
-            bindings = <&kp RIGHT_BRACKET>, <&kp NUMBER_6>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        EXCL_EIGHT: EXCL_EIGHT {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EXCL_EIGHT";
-            bindings = <&kp EXCLAMATION>, <&kp NUMBER_8>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         POUND_GRAVE: POUND_GRAVE {
             compatible = "zmk,behavior-mod-morph";
             label = "POUND_GRAVE";
@@ -224,6 +137,16 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        home_row_mod: home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW_MOD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <125>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -259,10 +182,10 @@
         DVORAK {
             display-name = "Base";
             bindings = <
-&kp TAB    &kp SEMI  &kp COMMA  &kp DOT  &kp P  &kp Y                                      &kp F     &kp G  &kp C    &kp R     &kp L     &kp FSLH
-&kp ESC    &kp A     &kp O      &kp E    &kp U  &kp I                                      &kp D     &kp H  &kp T    &kp N     &kp S     &kp MINUS
-&sk LSHFT  &kp SQT   &kp Q      &kp J    &kp K  &kp X      &media_control  &media_control  &kp B     &kp M  &kp W    &kp V     &kp Z     &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT   &mo 4    &sl 3  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET  &kp RALT  &kp RGUI  &mo 5
+&kp TAB    &kp SEMI               &kp COMMA                 &kp DOT                   &kp P                       &kp Y                                      &kp F      &kp G                        &kp C                      &kp R                      &kp L                  &kp FSLH
+&kp ESC    &home_row_mod LCTRL A  &home_row_mod LEFT_WIN O  &home_row_mod LEFT_ALT E  &home_row_mod LEFT_SHIFT U  &kp I                                      &kp D      &home_row_mod RIGHT_SHIFT H  &home_row_mod RIGHT_ALT T  &home_row_mod RIGHT_WIN N  &home_row_mod RCTRL S  &kp MINUS
+&sk LSHFT  &kp SQT                &kp Q                     &kp J                     &kp K                       &kp X      &media_control  &media_control  &kp B      &kp M                        &kp W                      &kp V                      &kp Z                  &sk RSHFT
+&kp LCTRL  &kp LGUI               &kp LALT                  &mo 4                     &sl 3                       &kp SPACE                                  &kp SPACE  &lt 3 BACKSPACE              &lt 4 ENTER                &kp RALT                   &kp RGUI               &mo 5
             >;
 
             sensor-bindings =
@@ -294,10 +217,10 @@
 
         NUM_SYM {
             bindings = <
-&DOLLAR_TILDE  &kp PLUS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPS                  &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp ASTERISK   &EXCL_PERCENT
-&POUND_GRAVE   &kp N1    &kp NUMBER_2      &kp N3          &kp N4                &kp N5                    &kp N6     &kp N7                 &kp N8           &kp N9             &kp N0         &AT_CARET
-&trans         &trans    &trans            &trans          &trans                &trans    &trans  &trans  &trans     &trans                 &trans           &trans             &PIPE_BCKSLSH  &trans
-&trans         &trans    &trans            &trans          &trans                &trans                    &trans     &trans                 &trans           &trans             &trans         &trans
+&DOLLAR_TILDE  &kp PLUS           &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPS                  &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp ASTERISK   &EXCL_PERCENT
+&POUND_GRAVE   &kp N1             &kp NUMBER_2      &kp N3          &kp N4                &kp N5                    &kp N6     &kp N7                 &kp N8           &kp N9             &kp N0         &AT_CARET
+&trans         &kp DOUBLE_QUOTES  &trans            &trans          &trans                &trans    &trans  &trans  &trans     &trans                 &kp LESS_THAN    &kp GREATER_THAN   &PIPE_BCKSLSH  &trans
+&trans         &trans             &trans            &trans          &trans                &trans                    &trans     &trans                 &trans           &trans             &trans         &trans
             >;
         };
 
