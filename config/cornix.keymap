@@ -159,6 +159,24 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
         };
+
+        J_COPY: J_COPY {
+            compatible = "zmk,behavior-mod-morph";
+            label = "J_COPY";
+            bindings = <&kp J>, <&copy>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        K_PSTE: K_PSTE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_PSTE";
+            bindings = <&kp K>, <&paste>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     conditional_layers {
@@ -185,6 +203,22 @@
         };
     };
 
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp C>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT_SHIFT &kp V>;
+            label = "PASTE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -205,10 +239,10 @@
         DVORAK {
             display-name = "Dvorak";
             bindings = <
-&kp TAB    &kp SEMI                &kp COMMA          &kp DOT  &kp P  &kp Y                                      &kp F      &kp G            &kp C        &kp R               &kp L                     &kp FSLH
-&kp ESC    &HMR_LEFT LEFT_SHIFT A  &HMR_LEFT LCTRL O  &kp E    &kp U  &kp I                                      &kp D      &kp H            &kp T        &HMR_RIGHT RCTRL N  &HMR_RIGHT RIGHT_SHIFT S  &kp MINUS
-&sk LSHFT  &kp SQT                 &kp Q              &kp J    &kp K  &kp X      &media_control  &media_control  &kp B      &kp M            &kp W        &kp V               &kp Z                     &sk RSHFT
-&kp LCTRL  &kp LGUI                &kp LALT           &mo 4    &sl 3  &kp SPACE                                  &kp SPACE  &lt 3 BACKSPACE  &lt 4 ENTER  &kp RALT            &kp RGUI                  &kp RCTRL
+&kp TAB    &kp SEMI                &kp COMMA          &kp DOT               &kp P                 &kp Y                                      &kp F      &kp G                   &kp C                   &kp R               &kp L                     &kp FSLH
+&kp ESC    &HMR_LEFT LEFT_SHIFT A  &HMR_LEFT LCTRL O  &HMR_LEFT LEFT_GUI E  &HMR_LEFT LEFT_ALT U  &kp I                                      &kp D      &HMR_RIGHT RIGHT_ALT H  &HMR_RIGHT RIGHT_GUI T  &HMR_RIGHT RCTRL N  &HMR_RIGHT RIGHT_SHIFT S  &kp MINUS
+&sk LSHFT  &kp SQT                 &kp Q              &J_COPY               &K_PSTE               &kp X      &media_control  &media_control  &kp B      &kp M                   &kp W                   &kp V               &kp Z                     &sk RSHFT
+&kp LCTRL  &kp LGUI                &kp LALT           &mo 4                 &sl 3                 &kp SPACE                                  &kp SPACE  &lt 3 BACKSPACE         &lt 4 ENTER             &kp RALT            &kp RGUI                  &kp RCTRL
             >;
 
             sensor-bindings =
