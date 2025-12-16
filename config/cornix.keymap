@@ -183,13 +183,13 @@
         compatible = "zmk,conditional-layers";
 
         Functions1 {
-            if-layers = <3 4>;
-            then-layer = <5>;
+            if-layers = <3 5>;
+            then-layer = <6>;
         };
 
         Functions2 {
-            if-layers = <3 6>;
-            then-layer = <5>;
+            if-layers = <3 4>;
+            then-layer = <6>;
         };
     };
 
@@ -225,10 +225,10 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                      &kp Y      &kp U            &kp I        &kp O     &kp P     &kp MINUS
-&kp ESC    &kp A     &kp S     &kp D  &kp F  &kp G                                      &kp H      &kp J            &kp K        &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &media_control  &media_control  &kp N      &kp M            &kp COMMA    &kp DOT   &kp FSLH  &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT  &mo 3  &sl 6  &kp SPACE                                  &kp SPACE  &lt 3 BACKSPACE  &lt 4 ENTER  &kp RALT  &kp RGUI  &mo 5
+&kp TAB    &kp Q     &kp W     &kp E  &kp R  &kp T                                      &kp Y        &kp U            &kp I        &kp O     &kp P     &kp MINUS
+&kp ESC    &kp A     &kp S     &kp D  &kp F  &kp G                                      &kp H        &kp J            &kp K        &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z     &kp X     &kp C  &kp V  &kp B      &media_control  &media_control  &kp N        &kp M            &kp COMMA    &kp DOT   &kp FSLH  &sk RSHFT
+&kp LCTRL  &kp LGUI  &kp LALT  &mo 4  &sl 3  &kp SPACE                                  &lt 5 SPACE  &lt 3 BACKSPACE  &lt 6 ENTER  &kp RALT  &kp RGUI  &kp RIGHT_CONTROL
             >;
 
             sensor-bindings =
@@ -239,10 +239,10 @@
         DVORAK {
             display-name = "Dvorak";
             bindings = <
-&kp TAB    &kp SEMI                &kp COMMA          &kp DOT               &kp P                 &kp Y                                      &kp F      &kp G                   &kp C                   &kp R               &kp L                     &kp FSLH
-&kp ESC    &HMR_LEFT LEFT_SHIFT A  &HMR_LEFT LCTRL O  &HMR_LEFT LEFT_GUI E  &HMR_LEFT LEFT_ALT U  &kp I                                      &kp D      &HMR_RIGHT RIGHT_ALT H  &HMR_RIGHT RIGHT_GUI T  &HMR_RIGHT RCTRL N  &HMR_RIGHT RIGHT_SHIFT S  &kp MINUS
-&sk LSHFT  &kp SQT                 &kp Q              &J_COPY               &K_PSTE               &kp X      &media_control  &media_control  &kp B      &kp M                   &kp W                   &kp V               &kp Z                     &sk RSHFT
-&kp LCTRL  &kp LGUI                &kp LALT           &mo 4                 &sl 3                 &kp SPACE                                  &kp SPACE  &lt 3 BACKSPACE         &lt 4 ENTER             &kp RALT            &kp RGUI                  &kp RCTRL
+&kp TAB    &kp SEMI                &kp COMMA          &kp DOT               &kp P                 &kp Y                                      &kp F        &kp G                   &kp C                   &kp R               &kp L                     &kp FSLH
+&kp ESC    &HMR_LEFT LEFT_SHIFT A  &HMR_LEFT LCTRL O  &HMR_LEFT LEFT_GUI E  &HMR_LEFT LEFT_ALT U  &kp I                                      &kp D        &HMR_RIGHT RIGHT_ALT H  &HMR_RIGHT RIGHT_GUI T  &HMR_RIGHT RCTRL N  &HMR_RIGHT RIGHT_SHIFT S  &kp MINUS
+&sk LSHFT  &kp SQT                 &kp Q              &J_COPY               &K_PSTE               &kp X      &media_control  &media_control  &kp B        &kp M                   &kp W                   &kp V               &kp Z                     &sk RSHFT
+&kp LCTRL  &kp LGUI                &kp LALT           &mo 5                 &sl 3                 &kp SPACE                                  &lt 5 SPACE  &lt 3 BACKSPACE         &lt 6 ENTER             &kp RALT            &kp RGUI                  &kp RCTRL
             >;
 
             sensor-bindings =
@@ -264,7 +264,7 @@
 &kp TAB    &kp Q     &kp W     &kp F  &kp P  &kp B                                      &kp J     &kp L  &kp U      &kp Y     &kp SEMI  &kp LBKT
 &kp ESC    &kp A     &kp R     &kp S  &kp T  &kp G                                      &kp M     &kp N  &kp E      &kp I     &kp O     &kp SQT
 &sk LSHFT  &kp Z     &kp X     &kp C  &kp D  &kp V      &media_control  &media_control  &kp K     &kp H  &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
-&kp LCTRL  &kp LGUI  &kp LALT  &mo 6  &mo 3  &kp SPACE                                  &kp BSPC  &mo 4  &kp RET    &kp RALT  &kp RGUI  &mo 5
+&kp LCTRL  &kp LGUI  &kp LALT  &mo 4  &mo 3  &kp SPACE                                  &kp BSPC  &mo 5  &kp RET    &kp RALT  &kp RGUI  &mo 6
             >;
 
             sensor-bindings =
@@ -278,6 +278,15 @@
 &POUND_GRAVE   &kp N1             &kp NUMBER_2      &kp N3          &kp N4                &kp N5                    &kp N6     &kp N7                 &kp N8           &kp N9             &kp N0         &AT_CARET
 &trans         &kp DOUBLE_QUOTES  &trans            &trans          &trans                &trans    &trans  &trans  &trans     &trans                 &kp LESS_THAN    &kp GREATER_THAN   &PIPE_BCKSLSH  &trans
 &trans         &trans             &trans            &trans          &trans                &trans                    &trans     &trans                 &trans           &trans             &trans         &trans
+            >;
+        };
+
+        GAME_NUM {
+            bindings = <
+&trans  &kp N1        &trans  &kp N2        &kp N5        &kp N8                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans        &kp NUMBER_6  &kp N9                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_3  &trans  &kp NUMBER_4  &kp N7        &kp N0  &tog 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -296,15 +305,6 @@
 &BT_CLEAR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &tog 0      &tog 1  &tog 2  &none    &kp PRINTSCREEN  &none
 &trans     &none         &none         &none         &none         &none         &out OUT_TOG  &none  &none       &none   &none   &none    &none            &trans
 &trans     &trans        &trans        &trans        &trans        &trans                             &kp DELETE  &trans  &trans  &trans   &trans           &trans
-            >;
-        };
-
-        GAME_NUM {
-            bindings = <
-&trans  &kp N1        &trans  &kp N2        &kp N5        &kp N8                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans        &kp NUMBER_6  &kp N9                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_3  &trans  &kp NUMBER_4  &kp N7        &kp N0  &tog 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
